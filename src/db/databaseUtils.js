@@ -1,4 +1,4 @@
-import { readFileSync, writeFileSync } from "fs";
+const { readFileSync, writeFileSync } = require("fs");
 /**
  * Internal helper to read and parse JSON file
  * @returns {Object} The parsed JSON data (empty object if file doesn't exist)
@@ -87,4 +87,4 @@ const removeKey = (keyPath) => {
   writeData(data);
   return true;
 };
-export { getKey, addKey, updateKey, removeKey };
+module.exports = { getKey, addKey, updateKey, removeKey };
